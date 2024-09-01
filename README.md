@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Test Work User Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Name
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+-   **User Table:** Displays user data in a tabular format.
+-   **Dynamic Filtering:** Allows filtering of table results by name, username, email, or phone number.
+-   **Horizontal Scrolling:** Provides horizontal scrolling if the table's content exceeds the screen width.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies
 
-- Configure the top-level `parserOptions` property like this:
+-   **React**: JavaScript library for building user interfaces.
+-   **Redux Toolkit**: For state management.
+-   **Axios**: For making HTTP requests.
+-   **TypeScript**: Provides type safety.
+-   **Vite**: Build tool and development server.
+-   **CSS**: For styling components.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Clone the Repository**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+    Open a terminal and run the command:
+    git clone https://github.com/Eduardd97/userManagementTable.git
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Navigate to the Project Directory**:
+
+    cd userManagementTable
+
+- **Install Dependencies**:
+
+    npm install
+
+- **Run the Project**:
+
+    npm run dev
+
+
+### Explanation
+
+- **`git clone https://github.com/Eduardd97/userManagementTable.git`**: This clones the repository named `userManagementTable` from GitHub to your local machine.
+- **`cd userManagementTable`**: This changes your working directory to `userManagementTable`, which is the folder created when you clone the repository.
+- **`npm install`**: This installs all dependencies specified in the `package.json` file.
+- **`npm run dev`**: This starts the Vite development server, making your project accessible at `http://localhost:3000`.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push the changes to your branch (`git push origin feature-branch`).
+6. Create a new Pull Request.
