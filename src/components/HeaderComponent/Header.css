@@ -1,0 +1,28 @@
+header {
+    width: 100%;
+    height: 80px;
+    background: rgb(85, 85, 85);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+}
+
+header .user-icon-box {
+    display: flex;
+    justify-content: start;
+    height: max-content;
+    margin-left: 50px;
+}
+
+header .user-icon-box .user-icon {
+    width: 50px;
+    height: 50px;
+}
+
+header .users-teble-title-box {
+    color: white;
+}
+
+header .users-teble-title-box .users-teble-title {
+    font-size: 30px;
+}
