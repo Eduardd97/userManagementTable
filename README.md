@@ -1,7 +1,5 @@
 # Test Work User Table
 
-# Project Name
-
 ## Description
 
 ## Features
