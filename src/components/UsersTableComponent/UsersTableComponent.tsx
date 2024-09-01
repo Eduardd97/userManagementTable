@@ -55,117 +55,116 @@ export const UsersTableComponent: FC = () => {
     return (
         <div className='users-table'>
             <h1>User Dashboard</h1>
-            <table>
-                <thead>
-                    <th>
-                        <section>
-                            <span>Name</span>
-
-                            <img
-                                src={searchIcon}
-                                alt=''
-                                onClick={() => handleClick(0)}
-                            />
-                        </section>
-
-                        <div className="th-input-box">
-                            <input
-                                className={
-                                    activeInputIndex === 0 ? "active-inpun" : ""
-                                }
-                                type='text'
-                                value={name}
-                                placeholder='Filter by name'
-                                onChange={(e) =>
-                                    dispatch(setNameFilter(e.target.value))
-                                }
-                            />
-                        </div>
-                    </th>
-                    <th>
-                        <section>
-                            <span> User Name</span>
-                            <img
-                                src={searchIcon}
-                                alt=''
-                                onClick={() => handleClick(1)}
-                            />
-                        </section>
-
-                        <div className="th-input-box">
-                            <input
-                                className={
-                                    activeInputIndex === 1 ? "active-inpun" : ""
-                                }
-                                type='text'
-                                value={username}
-                                placeholder='Filter by user name'
-                                onChange={(e) =>
-                                    dispatch(setUsernameFilter(e.target.value))
-                                }
-                            />
-                        </div>
-                    </th>
-                    <th>
-                        <section>
-                            <span>Email</span>
-                            <img
-                                src={searchIcon}
-                                alt=''
-                                onClick={() => handleClick(2)}
-                            />
-                        </section>
-
-                        <div className="th-input-box">
-                            <input
-                                className={
-                                    activeInputIndex === 2 ? "active-inpun" : ""
-                                }
-                                type='text'
-                                value={email}
-                                placeholder='Filter by email'
-                                onChange={(e) =>
-                                    dispatch(setEmailFilter(e.target.value))
-                                }
-                            />
-                        </div>
-                    </th>
-                    <th>
-                        <section>
-                            <span>Phone</span>
-                            <img
-                                src={searchIcon}
-                                alt=''
-                                onClick={() => handleClick(3)}
-                            />
-                        </section>
-
-                        <div className="th-input-box">
-                            <input
-                                className={
-                                    activeInputIndex === 3 ? "active-inpun" : ""
-                                }
-                                type='text'
-                                value={phone}
-                                placeholder='Filter by phone'
-                                onChange={(e) =>
-                                    dispatch(setPhoneFilter(e.target.value))
-                                }
-                            />
-                        </div>
-                    </th>
-                </thead>
-                <tbody>
-                    {filteredUsers.map((user) => (
-                        <tr key={user.id}>
-                            <td>{user.name}</td>
-                            <td>{user.username}</td>
-                            <td>{user.email}</td>
-                            <td>{user.phone}</td>
+            <div className="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <section>
+                                    <span>Name</span>
+                                    <img
+                                        src={searchIcon}
+                                        alt=''
+                                        onClick={() => handleClick(0)}
+                                    />
+                                </section>
+                                <div className="th-input-box">
+                                    <input
+                                        className={
+                                            activeInputIndex === 0 ? "active-inpun" : ""
+                                        }
+                                        type='text'
+                                        value={name}
+                                        placeholder='Filter by name'
+                                        onChange={(e) =>
+                                            dispatch(setNameFilter(e.target.value))
+                                        }
+                                    />
+                                </div>
+                            </th>
+                            <th>
+                                <section>
+                                    <span> User Name</span>
+                                    <img
+                                        src={searchIcon}
+                                        alt=''
+                                        onClick={() => handleClick(1)}
+                                    />
+                                </section>
+                                <div className="th-input-box">
+                                    <input
+                                        className={
+                                            activeInputIndex === 1 ? "active-inpun" : ""
+                                        }
+                                        type='text'
+                                        value={username}
+                                        placeholder='Filter by user name'
+                                        onChange={(e) =>
+                                            dispatch(setUsernameFilter(e.target.value))
+                                        }
+                                    />
+                                </div>
+                            </th>
+                            <th>
+                                <section>
+                                    <span>Email</span>
+                                    <img
+                                        src={searchIcon}
+                                        alt=''
+                                        onClick={() => handleClick(2)}
+                                    />
+                                </section>
+                                <div className="th-input-box">
+                                    <input
+                                        className={
+                                            activeInputIndex === 2 ? "active-inpun" : ""
+                                        }
+                                        type='text'
+                                        value={email}
+                                        placeholder='Filter by email'
+                                        onChange={(e) =>
+                                            dispatch(setEmailFilter(e.target.value))
+                                        }
+                                    />
+                                </div>
+                            </th>
+                            <th>
+                                <section>
+                                    <span>Phone</span>
+                                    <img
+                                        src={searchIcon}
+                                        alt=''
+                                        onClick={() => handleClick(3)}
+                                    />
+                                </section>
+                                <div className="th-input-box">
+                                    <input
+                                        className={
+                                            activeInputIndex === 3 ? "active-inpun" : ""
+                                        }
+                                        type='text'
+                                        value={phone}
+                                        placeholder='Filter by phone'
+                                        onChange={(e) =>
+                                            dispatch(setPhoneFilter(e.target.value))
+                                        }
+                                    />
+                                </div>
+                            </th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {filteredUsers.map((user) => (
+                            <tr key={user.id}>
+                                <td>{user.name}</td>
+                                <td>{user.username}</td>
+                                <td>{user.email}</td>
+                                <td>{user.phone}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

@@ -1,6 +1,8 @@
+/* styles.css */
 * {
     font-size: 18px;
 }
+
 .users-table {
     width: 100%;
     display: flex;
@@ -9,14 +11,24 @@
     align-items: center;
     padding: 25px 0 125px 0;
     flex: 1;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на мобильных устройствах */
 }
 
 .users-table h1 {
     font-size: 25px;
 }
 
+.table-wrapper {
+    width: 100%; /* Занимает всю ширину доступного контейнера */
+    overflow-x: auto; /* Включает горизонтальную прокрутку при необходимости */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 table {
-    width: 80%;
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    min-width: 900px; /* Минимальная ширина таблицы для включения горизонтальной прокрутки */
     border: 1px solid black;
     border-radius: 15px;
     border-collapse: separate;
@@ -50,6 +62,7 @@ table thead th .th-input-box {
 table thead th .th-input-box input {
     display: none;
 }
+
 table thead th .th-input-box .active-inpun {
     display: block;
     border-radius: 10px;
