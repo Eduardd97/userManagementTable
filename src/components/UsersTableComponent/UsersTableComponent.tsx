@@ -21,13 +21,13 @@ export const UsersTableComponent: FC = () => {
         null
     );
 
-    // Обработчик клика по иконке
+    // Icon click handler
     const handleClick = (index: number) => {
-        // Переключаем активное состояние инпута
+        // Switching the active state of the input
         if (activeInputIndex === index) {
-            setActiveInputIndex(null); // Если повторно нажали на ту же иконку, скрываем инпут
+            setActiveInputIndex(null); // If you click on the same icon again, hide the input
         } else {
-            setActiveInputIndex(index); // Иначе показываем инпут под выбранной иконкой
+            setActiveInputIndex(index); // Otherwise, we show the input under the selected icon
         }
     };
 
@@ -36,11 +36,11 @@ export const UsersTableComponent: FC = () => {
     }, [dispatch]);
 
     if (loading) {
-        return <div>Загрузка...</div>;
+        return <div>Loading...</div>;
     }
 
     if (error) {
-        return <div>Ошибка: {error}</div>;
+        return <div>Erorr: {error}</div>;
     }
 
     const filteredUsers = users.filter((user) => {

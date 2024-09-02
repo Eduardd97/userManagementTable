@@ -2,13 +2,11 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { User } from '../../type';
 
-
-// Создайте экземпляр axios с базовым URL
 const axiosGetApi = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
 });
 
-// Определите начальное состояние
+// Determination of the initial state
 interface UsersState {
     users: User[];
     loading: boolean;
@@ -21,7 +19,7 @@ const initialState: UsersState = {
     error: null,
 };
 
-// Создайте асинхронный thunk для получения данных
+// Creating an asynchronous thunk to receive data
 export const fetchUsers = createAsyncThunk<User[]>(
     'users/fetchUsers',
     async () => {
@@ -30,7 +28,6 @@ export const fetchUsers = createAsyncThunk<User[]>(
     }
 );
 
-// Создайте slice
 const usersSlice = createSlice({
     name: 'users',
     initialState,
@@ -47,7 +44,7 @@ const usersSlice = createSlice({
             })
             .addCase(fetchUsers.rejected, (state, action) => {
                 state.loading = false;
-                state.error = action.error.message || 'Неизвестная ошибка';
+                state.error = action.error.message || 'Unknown error';
             });
     },
 });

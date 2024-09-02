@@ -1,4 +1,3 @@
-/* styles.css */
 * {
     font-size: 18px;
 }
@@ -11,8 +10,8 @@
     align-items: center;
     padding: 25px 0 125px 0;
     flex: 1;
-    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
-    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на мобильных устройствах */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
 }
 
 .users-table h1 {
@@ -20,15 +19,15 @@
 }
 
 .table-wrapper {
-    width: 100%; /* Занимает всю ширину доступного контейнера */
-    overflow-x: auto; /* Включает горизонтальную прокрутку при необходимости */
+    width: 100%;
+    overflow-x: auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
 table {
-    width: 100%; /* Таблица занимает всю ширину контейнера */
-    min-width: 900px; /* Минимальная ширина таблицы для включения горизонтальной прокрутки */
+    width: 100%;
+    min-width: 900px; /* Minimum table width to enable horizontal scrolling */
     border: 1px solid black;
     border-radius: 15px;
     border-collapse: separate;
@@ -76,7 +75,7 @@ table tbody tr td {
     padding: 20px;
 }
 
-/* Удаление нижней границы у ячеек в последней строке */
+/* Removing the bottom border from cells in the last row */
 table tbody tr:last-child td {
     border-bottom: 0;
 }
