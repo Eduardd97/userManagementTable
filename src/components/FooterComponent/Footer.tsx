@@ -9,7 +9,7 @@ export const Footer = () => {
                 <span>2024-2025</span>
             </section>
 
-            <a href='https://linkedin.com/in/eduard-kozeichuk-843b06221' className="linkedin-link">Eduard Kozeuchuk</a>
+            <a href='https://linkedin.com/in/eduard-kozeichuk-843b06221' className="linkedin-link">Eduard Kozeichuk</a>
         </footer>
     );
 };
